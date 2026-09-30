@@ -1,0 +1,47 @@
+{
+  "name": "delivery-metrics",
+  "version": "1.0.0",
+  "description": "Deployment frequency, lead time for changes, change failure rate and time to restore, from your own deployment, incident and commit records. Weekly or monthly trends, no dependencies, nothing fetched.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "delivery-metrics": "bin/delivery-metrics.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage \"test/*.test.js\"",
+    "check": "node tools/check.mjs",
+    "example": "node bin/delivery-metrics.js --deployments examples/deployments.json --incidents examples/incidents.json --commits examples/commits.txt --by week"
+  },
+  "keywords": [
+    "dora-metrics",
+    "deployment-frequency",
+    "lead-time",
+    "change-failure-rate",
+    "mttr",
+    "software-delivery",
+    "devops",
+    "cli"
+  ],
+  "author": "INNERLUXES <info@innerluxes.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INNERLUXES/delivery-metrics.git"
+  },
+  "homepage": "https://innerluxes.dev/software-development/services"
+}
